@@ -1,0 +1,5 @@
+<form method="post" enctype="multipart/form-data" action=".">
+       {% csrf_token %}
+       <p><label for="id_recherche"> Recherche : </label> <input id="id_recherche" type="text" name="Recherche" maxlength="100" /></p>
+       <input type="submit"/>
+    </form>

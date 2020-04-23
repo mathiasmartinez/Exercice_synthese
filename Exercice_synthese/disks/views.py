@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from .models import Album,Track,Artist
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import recherche
 
 def Albums(request):
     albums = Album.objects.all()
@@ -14,3 +15,12 @@ def album(request,ident):
     album = Album.objects.all().get(id=ident).Title
     tracks = Track.objects.all().filter(Album=ident)
     return render(request,'disks/album.html',locals())
+
+def Recherche(request):
+    form = recherche(request.POST or None)
+    if form.is_valid():
+        champ = form.cleaned_data['recherche']
+
+
+    return render(request,'disks/chercher.html',locals())
+

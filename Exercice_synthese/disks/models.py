@@ -1,5 +1,5 @@
 from django.db import models
-
+from django import forms
 # Create your models here.
 class Track(models.Model):
 
@@ -30,3 +30,5 @@ class Artist(models.Model):
     def __str__(self):
         return self.id
 
+class recherche(forms.Form):
+    champ = models.CharField(max_length=200)
