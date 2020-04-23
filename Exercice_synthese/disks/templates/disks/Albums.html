@@ -1,0 +1,6 @@
+<ul>
+    {%for album in albums %}
+
+    <li> <a href="{% url 'afficher_album' ident=album.id  %}"> {{album.Title}} </a> </li>
+    {% endfor %}
+</ul>

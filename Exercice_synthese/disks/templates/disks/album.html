@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+    <style>
+table {
+    border:1px solid black;
+    border-collapse:collapse;
+    width:50%;
+    height:50%;
+}
+        td { border:1px solid black;
+            border-collapse: collapse;}
+        th { color:purple;
+            border:1px solid black;
+             border-collapse:collapse;
+        }
+
+    </style>
+</head>
+
+<h1> {{album}} </h1>
+
+<table>
+    <tr>
+        <th> Titre </th>
+        <td> Artiste </td>
+        <td> Durée </td>
+        <td> Prix </td>
+    </tr>
+    {%for track in tracks %}
+        <tr>
+            <th> <strong> {{track.Name}} </strong></th>
+            <td> {{track.Composer }}  </td>
+            <td>  {{track.Milliseconds}} </td>
+            <td>  {{track.UnitPrice }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</html>

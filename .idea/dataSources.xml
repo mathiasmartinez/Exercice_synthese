@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="chinook" uuid="103373a0-c75d-4fb9-b502-34a7bc83fc94">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\mathi\Desktop\Cours\Appli_web_nouvelle_generation\Exercice_synthese\chinook.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="chinook [2]" uuid="0d090a3e-b346-4ff5-8acd-37213e29d714">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\mathi\Desktop\Cours\Appli_web_nouvelle_generation\Exercice_synthese\Exercice_synthese\chinook.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
