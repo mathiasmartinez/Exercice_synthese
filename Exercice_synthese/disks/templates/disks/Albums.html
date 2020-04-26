@@ -1,6 +1,13 @@
+<html>
+<style>
+    a:visited {color:mediumvioletred}
+</style>
+
+<a style="font-size:200%" ; href="{%url 'chercher' %}">  Rechercher un titre ou un album </a>
 <ul>
     {%for album in albums %}
 
     <li> <a href="{% url 'afficher_album' ident=album.id  %}"> {{album.Title}} </a> </li>
     {% endfor %}
 </ul>
+</html>

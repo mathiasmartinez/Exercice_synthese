@@ -1,14 +1,20 @@
-<h1> Albums : </h1>
+<p> Les albums et morceaux contenant votre recherche sont les suivants : </p>
+<h4> <i> Albums : </i> </h4>
 <ul>
 {%for a in albums%}
-    <li> {{a.Title}} </li>
+    <li> <a href="{% url 'afficher_album' ident=a.id  %}"> {{a.Title}} </a> </li>
 {%endfor%}
- <h2> Titres : </h2>
+</ul>
+    {% if A %}
+    <p> Aucun album ne correspond à votre recherche </p>
+    {% endif %}
+    <h4> <i> Titres : </i> </h4>
+<ul>
     {%for t in tracks%}
     <li> {{t.Name}} </li>
 {%endfor%}
+</ul>
+    {% if T %}
+    <p> Aucun titre ne correspond à votre recherche </p>
+    {% endif %}
 
-    <h2> Artistes : </h2>
-    {%for c in artists%}
-    <li> {{c.Name}} </li>
-{%endfor%}

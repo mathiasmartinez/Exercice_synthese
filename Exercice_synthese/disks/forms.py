@@ -1,5 +1,10 @@
 from django import forms
+from .models import Album
 
-class recherche(forms.Form):
-    champ = forms.CharField(max_length=200)
+
+class AlbumForm(forms.ModelForm):
+    class Meta :
+        model = Album
+        fields = ('Title',)
+
 
