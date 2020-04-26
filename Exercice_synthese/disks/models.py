@@ -30,5 +30,4 @@ class Artist(models.Model):
     def __str__(self):
         return self.id
 
-class recherche(forms.Form):
-    champ = models.CharField(max_length=200)
+

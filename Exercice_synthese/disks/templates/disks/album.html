@@ -18,7 +18,7 @@ table {
 
     </style>
 </head>
-
+<body>
 <h1> {{album}} </h1>
 
 <table>
@@ -32,10 +32,24 @@ table {
         <tr>
             <th> <strong> {{track.Name}} </strong></th>
             <td> {{track.Composer }}  </td>
-            <td>  {{track.Milliseconds}} </td>
-            <td>  {{track.UnitPrice }}</td>
+
+            <td id="{{track.Milliseconds}}"> {{track.Milliseconds}}
+
+            </td>
+            <script>
+            var x =  document.getElementById("{{track.Milliseconds}}").innerHTML;
+            var z = Number(x) ;
+            var mins = (z-(z%60000))/60000 ;
+            var sec = ((z-(mins*60000))/1000).toFixed(0) ;
+            document.getElementById("{{track.Milliseconds}}").innerHTML = mins + "mins" + sec + "s" ;
+            </script>
+
+
+            <td>  {{track.UnitPrice }} </td>
         </tr>
     {% endfor %}
+
 </table>
 
+</body>
 </html>

@@ -1,5 +1,12 @@
-<form method="post" enctype="multipart/form-data" action=".">
+{% if search %}
+<p> Allez tfc </p>
+{% endif %}
+<p>
+
+
+<form  enctype="multipart/form-data" method="post" action="" >
        {% csrf_token %}
-       <p><label for="id_recherche"> Recherche : </label> <input id="id_recherche" type="text" name="Recherche" maxlength="100" /></p>
-       <input type="submit"/>
+       <p><label for="id_recherche"> Recherche : </label> <input id="id_recherche" type="text" name="adresse" maxlength="200" /></p>
+       <input type="submit" value="Submit" />
     </form>
+</p>
